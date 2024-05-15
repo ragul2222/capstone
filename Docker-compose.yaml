@@ -1,0 +1,8 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - D:/OneDrive/DEVOPS/CAPSTONE-PROJECT/Docker:/var/opt/nginx
+    ports:
+      - "8000:80"
