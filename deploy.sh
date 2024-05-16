@@ -1,18 +1,18 @@
 #!/bin/bash
-docker login -u AarthiK  -p $DOCKER_PASSWORD
+docker login -u aarthik  -p $DOCKER_PASSWORD
 if [[ $GIT_BRANCH == "origin/dev" ]]; then
        sh 'chmod +x build.sh'
        sh './build.sh'
 
-        docker tag test AarthiK/dev
-        docker push AarthiK/dev
+        docker tag test aarthik/dev
+        docker push aarthik/dev
 
 if [[ $GIT_BRANCH == "origin/prod" ]]; then
         sh 'chmod +x build.sh'
         sh './build.sh'
 
-        docker tag test AarthiK/prod
-        docker push Aarthik/prod
+        docker tag test aarthik/prod
+        docker push aarthik/prod
 
 else
         echo "failed"
