@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build and Push Docker Image') {
             steps {
@@ -8,11 +7,8 @@ pipeline {
                 sh 'chmod +x deploy.sh'
 
                 // Build the Docker image using the build script
-                sh './deploy.sh'
-
-                
+                sh './deploy.sh
             }
         }
-
     }
 }
