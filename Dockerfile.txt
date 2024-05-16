@@ -1,9 +1,4 @@
-FROM nginx:1.10.1-alpine
-#COPY index.html /usr/share/nginx/html
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
 COPY build/ /usr/share/nginx/html
-EXPOSE 8000
-CMD ["nginx","-g","daemon-off;"]
-
-
-#From nginx:latest
-#copy build/ /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
