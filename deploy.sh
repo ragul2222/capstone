@@ -1,5 +1,5 @@
 #!/bin/bash
-docker login -u AarthiK03  -p $DOCKER_PASSWORD
+docker login -u AarthiK  -p $DOCKER_PASSWORD
 if [[ $GIT_BRANCH == "origin/dev" ]]; then
        sh 'chmod +x build.sh'
        sh './build.sh'
