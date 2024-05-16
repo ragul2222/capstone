@@ -1,19 +1,19 @@
 pipeline {
-agent any
-stages {
-stage('Building image') {
-steps {
-script {
-sh 'chmod +x build.sh'
-sh './build.sh'
-}
-}
-}
-stage('deploy') {
-steps {
-sh 'chmod +x deploy.sh'
-sh './deploy.sh'
-}
-}
-}
+    agent any
+       stages {
+             stage('Building image') {
+                  steps {
+                       script {
+                             sh 'chmod +x build.sh'
+                             sh './build.sh'
+                       }
+                   }
+             }
+              stage('deploy') {
+                    steps {
+                         sh 'chmod +x deploy.sh'
+                          sh './deploy.sh'
+                    }
+              }
+        }
  }
