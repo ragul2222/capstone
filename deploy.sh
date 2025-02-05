@@ -1,5 +1,5 @@
 #!/bin/bash
-    sudo fuser -k 80/tcp
+
     echo hi123
     sh 'chmod +x build.sh'
     sh './build.sh'
